@@ -36,10 +36,10 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-    name: 'HelloWorld',
+    name: 'home',
     props: {
         msg: {
             type: String,
@@ -64,7 +64,7 @@ label {
 }
 
 code {
-    background-color: #eee;
+    background-color: #eeeeee;
     padding: 2px 4px;
     border-radius: 4px;
     color: #304455;

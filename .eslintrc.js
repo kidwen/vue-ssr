@@ -19,9 +19,10 @@ module.exports = {
         indent: ['error', 4],
         'no-param-reassign': [2, { props: false }],
         'vue/no-multiple-template-root': 0,
-        'import/extensions': ['error', 'always',
+        'import/extensions': ['error', 'ignorePackages',
             { ts: 'never' },
         ],
+        'vue/multi-word-component-names': ['off'],
     },
     settings: {
         'import/resolver': {
