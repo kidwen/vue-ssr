@@ -23,6 +23,11 @@ module.exports = {
             { ts: 'never' },
         ],
         'vue/multi-word-component-names': ['off'],
+        'import/no-extraneous-dependencies': 'off',
+        'import/prefer-default-export': 'off',
+        'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
+        'no-use-before-define': 'off',
+        'global-require': 'off',
     },
     settings: {
         'import/resolver': {

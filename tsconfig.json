@@ -12,13 +12,14 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "lib": [
             "esnext",
             "dom"
         ],
-        "types": [
-            "vite/client"
-        ]
+        // "types": [
+        //     "vite/client"
+        // ]
     },
     "include": [
         "src/**/*.ts",
@@ -27,7 +28,7 @@
         "src/**/*.vue"
     ],
     "isolatedModules": true,
-    "files": [
-        "src/main.ts",
-    ]
+    // "files": [
+    //     "src/main.ts",
+    // ]
 }
