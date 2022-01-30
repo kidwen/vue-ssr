@@ -3,7 +3,6 @@ const path = require('path');
 
 const toAbsolute = (p) => path.resolve(__dirname, p);
 
-// eslint-disable-next-line import/no-unresolved
 const manifest = require('./dist/static/ssr-manifest.json');
 
 const template = fs.readFileSync(toAbsolute('dist/static/index.html'), 'utf-8');
@@ -14,7 +13,6 @@ const routesToPrerender = fs.readdirSync(toAbsolute('src/views')).map((file) => 
     return name === 'home' ? '/' : `/${name}`;
 });
 (async () => {
-    // eslint-disable-next-line no-restricted-syntax
     for (const url of routesToPrerender) {
         // eslint-disable-next-line no-await-in-loop
         const [appHtml, preloadLinks] = await render(url, manifest);
