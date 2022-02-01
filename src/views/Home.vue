@@ -9,9 +9,7 @@
     <p class="inter">this will be styled with a font-face</p>
     <p class="import-meta-url">{{ state.url }}</p>
     <p class="protocol">{{ state.protocol }}</p>
-    <p class="nested-virtual">
-        msg from nested virtual module: {{ virtualMsg }}
-    </p>
+    <p class="nested-virtual">msg from nested virtual module: {{ virtualMsg }}</p>
     <Button>CommonButton</Button>
     <div>
         encrypted message:

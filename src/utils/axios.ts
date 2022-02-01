@@ -1,5 +1,4 @@
 import Axios from 'axios';
-// import { ElMessage } from 'element-plus';
 
 const baseURL = 'https://api.github.com';
 
@@ -21,13 +20,9 @@ axios.interceptors.response.use(
         if (error.response && error.response.data) {
             const code = error.response.status;
             const msg = error.response.data.message;
-            // eslint-disable-next-line no-console
             console.error(`Code: ${code},Message:${msg}`);
-            // ElMessage.error(`Code: ${code},Message:${msg}`);
         } else {
-            // eslint-disable-next-line no-console
             console.error(error);
-            // ElMessage.error(error);
         }
         return Promise.reject(error);
     },
