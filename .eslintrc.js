@@ -18,7 +18,7 @@ module.exports = {
     rules: {
         indent: ['error', 4],
         'no-param-reassign': [2, { props: false }],
-        'no-console': ['error', { allow: ['error'] }],
+        'no-console': ['error', { allow: ['error', 'info'] }],
         'vue/no-multiple-template-root': 0,
         'import/extensions': ['error', 'ignorePackages',
             { ts: 'never' },

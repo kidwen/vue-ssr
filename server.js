@@ -9,6 +9,7 @@ async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV 
     const resolve = (p) => path.resolve(__dirname, p);
 
     const indexProd = isProd ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8') : '';
+    // @ts-ignore
     const manifest = isProd ? require('./dist/client/ssr-manifest.json') : {};
 
     const app = express();
@@ -62,7 +63,6 @@ async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV 
 if (!isTest) {
     createServer().then(({ app }) => {
         app.listen(3000, () => {
-            // eslint-disable-next-line no-console
             console.info('http://localhost:3000');
         });
     });
